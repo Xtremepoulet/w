@@ -8,6 +8,7 @@ const OWM_API_KEY = process.env.OWM_API_KEY;
 
 router.post('/', (req, res) => {
 	// Check if the city has not already been added
+	console.log('OK')
 	City.findOne({ cityName: { $regex: new RegExp(req.body.cityName, 'i') } }).then(dbData => {
 		if (dbData === null) {
 			// Request OpenWeatherMap API for weather data
