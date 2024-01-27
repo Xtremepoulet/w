@@ -14,7 +14,7 @@ document.querySelector('#register').addEventListener('click', () => {
         email: email,
     }
 
-    fetch('http://localhost:3000/users/signup', {
+    fetch('https://w-eta-blond.vercel.app/users/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -41,7 +41,7 @@ document.querySelector('#connection').addEventListener('click', () => {
         email: email,
     }
 
-    fetch('http://localhost:3000/signin', {
+    fetch('https://w-eta-blond.vercel.app/users/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
